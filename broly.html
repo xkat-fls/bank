@@ -1,0 +1,74 @@
+<body class="blink-bg" id="hoverTrigger">
+
+    <img src="broly.jpg" class="center" id="bouncingImage">
+    <style>
+        .blink-bg{
+            color: #fff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            animation: blinkingBackground 1s infinite;
+        }
+        
+        @keyframes blinkingBackground{
+            0%		{ background-color: #10c018;}
+            25%		{ background-color: #1056c0;}
+            50%		{ background-color: #ef0a1a;}
+            75%		{ background-color: #254878;}
+            100%	        { background-color: #04a1d5;}
+        }
+    </style>
+    
+    <style>.center {
+        
+        margin-left: 25%;
+        margin-right: 40%;
+        margin-top: 20%;
+        width: 100%;
+      }
+    </style>
+
+
+<audio hidden controls="controls" id="myAudio" >
+    <source src="putin.mp4" type="audio/mp4" name="audio" />
+    Your browser does not support the audio element.
+</audio>
+
+
+
+<script>
+    // Get references to the audio element and the hover trigger element
+    var audio = document.getElementById("myAudio");
+    var hoverTrigger = document.getElementById("hoverTrigger");
+
+    // Mute the audio when page loads
+    audio.muted = false;
+
+    // Add a hover event listener to the trigger element
+    hoverTrigger.addEventListener("mouseenter", function() {
+        audio.muted = false;
+        audio.play();
+    });
+
+    // Pause the audio when the user moves the mouse away
+
+</script>
+<style>
+    #bouncingImage {
+        position: absolute;
+        width: 50%; /* Adjust the image size as needed */
+        height: 50%; /* Adjust the image size as needed */
+        animation: bounce .7s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(-20%);
+        }
+        50% {
+            transform: translateY(-50%); /* Adjust the bounce height */
+        }
+    }
+</style>
+</body>
+
